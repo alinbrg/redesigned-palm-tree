@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+form {
+  max-width: 600px;
+  padding: 0 20px;
+  margin: 20px auto;
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    gap: 5px;
+    &:has(input[type="checkbox"], input[type="radio"]) {
+      flex-direction: row;
+    }
+
+    &:has([required]) span {
+      &::before {
+        content: "*";
+        color: red;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  input,
+  textarea,
+  select {
+    padding: 5px;
+    border: 2px solid #ccc;
+    outline: none;
+
+    &:focus-visible {
+      border-color: #9bce19;
+    }
+
+    &:user-valid {
+      border-color: #001ab0;
+    }
+    &:user-invalid {
+      border-color: red;
+    }
+  }
+
+  input,
+  textarea {
+    /* color: red;
+    font-size: 14px;
+    &::placeholder {
+      color: aquamarine;
+      font-size: 14px;
+    } */
+  }
+
+  input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    accent-color: #9bce19;
+  }
+
+  textarea {
+    resize: none;
+    height: 100px;
+    width: 100%;
+  }
+  button {
+    display: block;
+    margin-top: 10px;
+    padding: 5px 10px;
+  }
+}

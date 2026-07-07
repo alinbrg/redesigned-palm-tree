@@ -15,8 +15,106 @@
       property="og:image"
       content="https://raw.githubusercontent.com/alinbrg/crispy-dollop/refs/heads/main/src/images/3.jpg"
     />
+
+    <meta name="twitter:title" content="Form tag and Meta tags" />
+    <meta name="twitter:description" content="lesson 10 is about forms and meta tags" />
+    <meta
+      name="twitter:image"
+      content="https://raw.githubusercontent.com/alinbrg/crispy-dollop/refs/heads/main/src/images/3.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Meta Tags</h1>
+    <section class="container">
+      <h1>Meta Tags</h1>
+
+      <!-- <form action="https://www.google.com/search">
+        <input type="text" id="keyword" name="q" />
+
+        <button type="submit">Search</button>
+        <button type="reset">Reset</button>
+        <button type="button">Button</button>
+      </form> -->
+
+      <form action="#">
+        <label for="user_name">
+          <span> Username: </span>
+          <input type="text" id="user_name" name="username" placeholder="Enter your username" required />
+        </label>
+
+        <label for="user_age"
+          >Age:
+          <input type="number" id="user_age" name="age" max="100" min="15" step="5" />
+        </label>
+
+        <label for="user_email"
+          ><span>Email:</span>
+          <input type="email" id="user_email" name="email" placeholder="Example@gmail.com" required />
+        </label>
+
+        <label for="user_password"
+          ><span>Password:</span>
+          <input type="password" id="user_password" minlength="5" name="password" required />
+        </label>
+
+        <label for="user_avatar"
+          ><span>Avatar:</span>
+          <input type="file" id="user_avatar" name="avatar" accept=".pdf" />
+        </label>
+
+        <label for="user_birthdate"
+          ><span>Birthdate:</span>
+          <input type="date" id="user_birthdate" name="birthdate" />
+        </label>
+
+        <label for="user_city"
+          ><span>City:</span>
+          <select id="user_city" name="city">
+            <option value="">Select your city</option>
+            <option value="new_york">New York</option>
+            <option value="los_angeles">Los Angeles</option>
+            <option value="chicago">Chicago</option>
+            <option value="houston">Houston</option>
+            <option value="phoenix">Phoenix</option>
+          </select>
+        </label>
+
+        <label for="user_bio"
+          >Bio:
+          <textarea id="user_bio" name="bio" placeholder="Write something about yourself"></textarea>
+        </label>
+
+        <fieldset>
+          <legend>Gender</legend>
+
+          <label for="gender_male">
+            <input type="radio" id="gender_male" name="gender" value="male" />
+            Male</label
+          >
+
+          <label for="gender_female">
+            <input type="radio" id="gender_female" name="gender" value="female" />
+            Female</label
+          >
+          <label for="gender_other">
+            <input type="radio" id="gender_other" name="gender" value="other" />
+            Other</label
+          >
+        </fieldset>
+
+        <label for="agree_terms">
+          <input type="checkbox" id="agree_terms" name="terms" />
+          By tapping checkbox, you agree to create an account and to Facebook's Terms of Service:
+        </label>
+        <label for="agree_contact">
+          <input type="checkbox" id="agree_contact" name="contacts" />
+          People who use our service may have uploaded your contact information to Facebook
+        </label>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
   </body>
 </html>
